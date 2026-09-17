@@ -31,7 +31,7 @@ library(susieR)
 library(ctwas)
 library(Matrix)
 
-setwd("~/Desktop/Feral_project")
+setwd("~/Desktop")
 
 ## ----------------------------------------------------------------------
 ## Load shared inputs once
@@ -221,12 +221,12 @@ run_ctwas_locus_region <- function(target_trait, target_genes,
 
 ## ----------------------------------------------------------------------
 ## Define your loci + candidate genes here.
-## One row per locus; genes is a list-column so a locus can carry >1 gene.BERKAU:34:1632693-1642694, BER:2:3273757-3283757, KAU:1:166050552-166060552
+## One row per locus; genes is a list-column so a locus can carry >1 gen, n = number of samples in the data set, can be seen in the genotype file, see how many column the data have. Can also be seen in the expression dataset.
 ## ----------------------------------------------------------------------
 
 loci_table <- list(
-  list(trait = "MEANXOTHER_D", chr = "1",  start = 166050552, end = 166060552,
-       genes = c("ENSGALG00010003246"), n = 376)
+  list(trait = "Trait", chr = "",  start = 1124535, end = 1232456,
+       genes = c("EnsemblID"), n = 376)
   # add more loci here, e.g.:
   # list(trait = "OTHER_TRAIT", chr = "3", start = 1234000, end = 1244000,
   #      genes = c("ENSGALG..."), n = 66)
